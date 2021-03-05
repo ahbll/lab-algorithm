@@ -78,12 +78,10 @@ public class Main {
         for (String child : childSet) {
             if (findSet.contains(child)) {
                 flag = true;
+                return;
             }
-            if (graph.containsKey(child)) {
-                Set<String> set = new HashSet<>(findSet);
-                set.add(child);
-                findCircle(child, graph, set);
-            }
+            findSet.add(child);
+            findCircle(child, graph, findSet);
         }
     }
 }

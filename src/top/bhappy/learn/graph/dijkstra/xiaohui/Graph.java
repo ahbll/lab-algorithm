@@ -1,5 +1,4 @@
-package top.bhappy.learn.graph.dijkstra.v1;
-
+package top.bhappy.learn.graph.dijkstra.xiaohui;
 import java.util.LinkedList;
 
 /**

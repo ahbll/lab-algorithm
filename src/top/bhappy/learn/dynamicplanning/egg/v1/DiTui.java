@@ -1,5 +1,7 @@
 package top.bhappy.learn.dynamicplanning.egg.v1;
 
+import java.util.Arrays;
+
 /**
  * @Author: liu lei
  * @Date: 2020/4/5 20:59
@@ -34,6 +36,7 @@ public class DiTui {
                     currentCache[m] = Math.min(currentCache[m], 1 + Math.max(preCache[k - 1], currentCache[m - k]));
                 }
             }
+            System.out.println(Arrays.toString(currentCache));
         }
         return currentCache[floorNum];
     }

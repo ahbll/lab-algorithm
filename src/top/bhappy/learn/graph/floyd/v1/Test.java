@@ -5,7 +5,7 @@ package top.bhappy.learn.graph.floyd.v1;
  * @Date: 2020/3/2 14:25
  * @Description:
  */
-public class Main {
+public class Test {
 
     public static void main(String[] args) {
         int[][] matrix = {

@@ -1,4 +1,4 @@
-package top.bhappy.testing.huawei;
+package top.bhappy.testing.huawei.fist;
 
 /**
  * @Author: liu lei

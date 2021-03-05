@@ -1,4 +1,4 @@
-package top.bhappy.testing.huawei;
+package top.bhappy.testing.huawei.prepare;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,5 @@
-package top.bhappy.learn.graph.dijkstra.v1;
+package top.bhappy.learn.graph.dijkstra.xiaohui;
+
 
 import java.util.Map;
 
@@ -9,8 +10,8 @@ import java.util.Map;
  */
 public class Main {
     public static void main(String[] args) {
-        Dijkstra dijkstra1 = new Dijkstra();
-        MyDijkstra dijkstra2 = new MyDijkstra();
+        Dijkstra dijkstra1 = new top.bhappy.learn.graph.dijkstra.xiaohui.Dijkstra();
+        Dijkstra dijkstra2 = new Dijkstra();
         Graph graph = new Graph(7);
         initGraph(graph);
 

@@ -8,64 +8,68 @@ import java.util.*;
  * @Description:
  */
 
-//迪克斯特拉---程序员小灰
+//迪克斯特拉---ll
 public class Dijkstra {
 
 
-    //小灰的
+    /**
+     * Dijkstra最短路径算法
+     */
     public static Map<Integer, Integer> dijkstra(Graph graph, int startIndex) {
-        //创建距离表，存储从起点到每一个顶点的零时距离
-        Map<Integer, Integer> distanceMap = new HashMap<>();
-        //记录遍历过的点
-        Set<Integer> accessSet = new HashSet<>();
-        //图的顶点数
+
         int size = graph.vertices.length;
-        //初始化最短路径表，到达每个顶点的路径默认为无穷大
-        for(int i = 1; i < size; i++) {
-            if (i == startIndex) {
-                distanceMap.put(i, 0);
-            } else {
-                distanceMap.put(i, Integer.MAX_VALUE);
-            }
+
+        //startIndex到各个节点的距离
+        //可以使用数组
+        HashMap<Integer, Integer> distanceMap = new HashMap<>();
+
+        //已经遍历过的节点
+        //可以使用数组
+        HashSet<Integer> accessSet = new HashSet<>();
+
+        //前一个节点
+        int[] preVertex = new int[size];
+
+        //初始化距离为∞
+        for (int i = 0; i < size; i++) {
+            distanceMap.put(i, Integer.MAX_VALUE);
         }
-        //遍历起点，刷新距离表
-        accessSet.add(0);
-        LinkedList<Edge> edgesFromStart = graph.adj[startIndex];
-        for(Edge edge : edgesFromStart) {
+        //到自己的距离为0
+        distanceMap.put(startIndex, 0);
+        //先遍历startIndex
+        accessSet.add(startIndex);
+        preVertex[startIndex] = -1;
+        LinkedList<Edge> startIndexEdges = graph.adj[startIndex];
+        for (Edge edge : startIndexEdges) {
             distanceMap.put(edge.index, edge.weight);
+            preVertex[edge.index] = startIndex;
         }
-        //主循环，重复 遍历最短距离顶点和刷新距离表
-        for(int i = 1; i < size; i++) {
-            //寻找最短距离顶点
-            int minDistanceFromStart = Integer.MAX_VALUE;
-            int minDistanceIndex = -1;
-            for(int j = 1; j < size; j++) {
-                if(!accessSet.contains(j) && distanceMap.get(j) < minDistanceFromStart) {
-                    minDistanceFromStart = distanceMap.get(j);
-                    minDistanceIndex = j;
+        while (accessSet.size() < size) {
+            //距离start最近的index
+            Integer minIndex = -1;
+            //距离start最近的距离
+            Integer minDistance = Integer.MAX_VALUE;
+            //找到最小的distance
+            for (Map.Entry<Integer, Integer> entry : distanceMap.entrySet()) {
+                if (!accessSet.contains(entry.getKey()) && entry.getValue() < minDistance) {
+                    minIndex = entry.getKey();
+                    minDistance = entry.getValue();
                 }
             }
-            if(minDistanceIndex == -1) {
-                break;
-            }
-            //遍历顶点，刷新距离表
-            accessSet.add(minDistanceIndex);
-            for(Edge edge : graph.adj[minDistanceIndex]) {
-                if(accessSet.contains(edge.index)) {
-                    continue;
-                }
-                int weight = edge.weight;
-                int preDistance = distanceMap.get(edge.index);
-                if(weight != Integer.MAX_VALUE && (minDistanceFromStart + weight < preDistance)) {
-                    distanceMap.put(edge.index, minDistanceFromStart + weight);
+            //开始遍历minIndex
+            accessSet.add(minIndex);
+            LinkedList<Edge> edges = graph.adj[minIndex];
+            for(Edge edge : edges) {
+                if (distanceMap.get(edge.index) > minDistance + edge.weight) {
+                    distanceMap.put(edge.index, minDistance + edge.weight);
+                    preVertex[edge.index] = minIndex;
                 }
             }
+
         }
+        System.out.println(Arrays.toString(preVertex));
         return distanceMap;
     }
-
-
-
 
 
 

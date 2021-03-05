@@ -1,23 +1,25 @@
-package top.bhappy.learn.graph.floyd.v1;
+package top.bhappy.learn.graph.floyd.v2;
 
 /**
  * @Author: liu lei
- * @Date: 2020/3/2 14:09
+ * @Date: 2021/2/28 18:45
  * @Description:
  */
+
 //佛洛依德
 public class Floyd {
 
     public static final int INF = Integer.MAX_VALUE;
 
-    public static void floyd(int[][] matrix) {
-        //循环更新矩阵的值
-        //k---经由的顶点
-        //i---起点
+    public static void transform(int[][] matrix) {
+        int count = matrix.length;
+        //依次加入中点，并更新矩阵
+        //k---可经过的顶点
         //j---终点
-        for (int k = 0; k < matrix.length; k ++) {
-            for (int i = 0; i < matrix.length; i ++) {
-                for (int j = 0; j < matrix.length; j ++) {
+        //i---起点
+        for (int k = 0; k < count; k ++) {
+            for (int i = 0; i < count; i ++) {
+                for (int j = 0; j < count; j ++) {
                     if (matrix[i][k] == INF || matrix[k][j] == INF) {
                         continue;
                     }

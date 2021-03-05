@@ -1,4 +1,4 @@
-package top.bhappy.testing.huawei;
+package top.bhappy.testing.huawei.prepare;
 
 /**
  * @Author: liu lei
@@ -6,6 +6,7 @@ package top.bhappy.testing.huawei;
  * @Description:
  */
 
+import java.util.Collections;
 import java.util.Scanner;
 
 /**

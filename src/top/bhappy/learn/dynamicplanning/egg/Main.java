@@ -13,7 +13,7 @@ import java.util.Date;
 public class Main {
     public static void main(String[] args) {
         int eggNum = 5;
-        int floorNum = 1000;
+        int floorNum = 20;
         long t1 = new Date().getTime();
         System.out.println(DiTui.getMinSteps(eggNum, floorNum));
         long t2 = new Date().getTime();

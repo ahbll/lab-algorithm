@@ -38,6 +38,7 @@ public class DiGui {
             return rMax(golds, workers, index - 1, worker);
         }
         // 状态转换 缩减问题规模
+        // 通过备忘录优化
         return Math.max(golds[index] + rMax(golds, workers, index - 1, worker - workers[index]),
                 rMax(golds, workers, index - 1, worker));
     }

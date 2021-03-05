@@ -132,7 +132,8 @@ public class BinarySearchTree {
                         pp.right = null;
                     }
                     return;
-                //左子树不为空，右子树不为空   有bug！！！！！！！！！！！！！！！！！
+                // 左子树不为空，右子树不为空
+                // todo 有bug！！！！！！！！！！！！！！！！！
                 } else {
                     // 寻找右子树最小值
                     Node minP = p.right;
