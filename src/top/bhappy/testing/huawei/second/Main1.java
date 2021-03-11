@@ -5,12 +5,13 @@ import java.util.*;
 
 
 // 70
+// todo fix
 
 /**
  * 输入：a:2,b:3,A:5@b:3,A:3
  * 输出：a:2,A:2
  */
-public class Main {
+public class Main1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         while (scanner.hasNextLine()) {

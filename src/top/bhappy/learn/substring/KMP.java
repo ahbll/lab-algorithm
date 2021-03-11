@@ -5,6 +5,8 @@ package top.bhappy.learn.substring;
  * @Date: 2020/12/31 14:51
  * @Description:
  */
+
+//todo
 public class KMP {
 
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package top.bhappy.learn.list.skip;
+package top.bhappy.learn.list.skip.v1;
 
 /**
  * @Author: liu lei

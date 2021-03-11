@@ -5,6 +5,8 @@ package top.bhappy.learn.factorial;
  * @Date: 2020/1/13 19:31
  * @Description:
  */
+
+// 阶乘
 public class Factorial {
 
     public static void main(String[] args) {
