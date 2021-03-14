@@ -1,5 +1,6 @@
 package top.bhappy.learn.sort.shell.v1;
 
+import java.util.Date;
 import java.util.Random;
 
 /**
@@ -10,18 +11,15 @@ import java.util.Random;
 public class ShellSort {
 
     public static void main(String[] args) {
-        //int[] array = {0,9,8,6,7,1,2,4,5,0,3};
-        //int[] array = {9, 8, 11};
-        //int[] array = {3, 2, 1, 4, 5, 7, 8, 11, 9, 10, 6};
-        int[] array = new int[10000];
-        Random random = new Random();
-        for (int i = 0; i < 10000; i++) {
-            array[i] = random.nextInt(10000);
-        }
+        int[] array = {5,8,6,3,9,2,1,7};
+
         sort(array);
+
         for (int i : array) {
-            //System.out.println(i);
+            System.out.print(i);
+            System.out.print(" ");
         }
+        System.out.println();
     }
 
     // 0 1 2 3 4 5 6 -1
@@ -32,7 +30,9 @@ public class ShellSort {
             //循环步长内每个起点
             for (int i = 0; i < step; i++) {
                 //插入排序
-                for(int j = i; j < arr.length; j += step) {
+                //在大多数元素已经有序的情况下，插入排序的工作量较小
+                //在元素数量较少的情况下，插入排序的工作量较小
+                for(int j = i + step; j < arr.length; j += step) {
                     int temp = arr[j];
                     for (int k = j - step; k >= i; k -= step) {
                         count ++;
@@ -41,6 +41,7 @@ public class ShellSort {
                         } else {
                             //放到第一个不大于temp的后一个
                             arr[k + step] = temp;
+                            //经过前几次排序，当step=1时，数组有序度较高，此处可以break掉大量循环
                             break;
                         }
                         //全部数据都大于temp，放至第一个
@@ -49,8 +50,7 @@ public class ShellSort {
                 }
             }
         }
-        System.out.println(count + "------------");
+        System.out.println("count：" + count);
     }
-
 
 }

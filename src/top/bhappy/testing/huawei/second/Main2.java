@@ -4,10 +4,11 @@ import java.util.*;
 
 //75
 //todo fix
+//fixed
 
 /**
  * 输入字符串，只包含大小写字母
- * 统计每个字符的数量，按照数量从大到小排序，数量相同的，小写字母在前面
+ * 统计每个字符的数量，按照数量从大到小排序，数量相同的，字符顺序，小写字母在前面
  * 输入：aaBBCCC
  * 输出：C:3;a:2;B:2
  */
@@ -35,19 +36,20 @@ public class Main2 {
                 list.add(entry.getKey());
                 tMap.put(entry.getValue(), list);
             }
-            StringBuffer sb = new StringBuffer();
+            StringBuilder sb = new StringBuilder();
             for (Map.Entry<Integer, List<Character>> entry : tMap.entrySet()) {
                 int count = entry.getKey();
                 List<Character> list = entry.getValue();
                 if (list.size() == 1) {
                     append(sb, list.get(0), count);
                 } else {
-                    list = sort(list);
+                    list = sort2(list);
                     for (Character c : list) {
                         append(sb, c, count);
                     }
                 }
             }
+            //倒序
             String[] array = sb.toString().split(";");
             for (int i = array.length - 1; i >= 0; i --) {
                 System.out.print(array[i]);
@@ -56,7 +58,7 @@ public class Main2 {
             System.out.println();
         }
     }
-    public static void append(StringBuffer sb, char c, int count) {
+    private static void append(StringBuilder sb, char c, int count) {
         sb.append(c + "");
         sb.append(":");
         sb.append(count);
@@ -64,13 +66,33 @@ public class Main2 {
     }
 
 
-    public static List<Character> sort(List<Character> list) {
+    // 按字母顺序、先小写后大写排序
+    private static List<Character> sort(List<Character> list) {
+        List<Character> lowList = new ArrayList<>();
+        List<Character> highList = new ArrayList<>();
+        for (char c : list) {
+            if (c >= 'a' && c <= 'z') {
+                lowList.add(c);
+            } else if (c >= 'A' && c <= 'Z') {
+                highList.add(c);
+            }
+        }
+        Collections.sort(lowList);
+        Collections.sort(highList);
+        lowList.addAll(highList);
+        Collections.reverse(lowList);
+        return lowList;
+
+    }
+
+    private static List<Character> sort2(List<Character> list) {
         Collections.sort(list);
         List<Character> result = new ArrayList<>();
         int index = 0;
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i) >= 'a' ) {
                 index = i;
+                break;
             }
         }
 

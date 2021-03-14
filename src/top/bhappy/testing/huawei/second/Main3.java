@@ -27,24 +27,28 @@ public class Main3 {
                     list.add(i);
                 }
             }
-            if (list.size() == line.length() || list.size() == 0) {
+            //全部为字母，输出-1
+            //无字母，输出-1
+            if (list.size() == line.length() || list.isEmpty()) {
                 System.out.println(-1);
                 continue;
             }
+            //只有一个字母，输出字符串长度
+            if (list.size() == 1) {
+                System.out.println(line.length());
+                continue;
+            }
             int max = 0;
+            //任意第i个和第i+2个字母的最大距离
             for (int i = 0; i < list.size() - 2; i++) {
                 if (list.get(i + 2) - list.get(i) - 1 > max) {
                     max = list.get(i + 2) - list.get(i) - 1;
                 }
             }
-            max = Math.max(max, list.get(0) + 1);
-            if (list.get(0) == 0 && list.size() > 1) {
-                max = Math.max(max, list.get(1));
-            }
-            if (list.get(0) > 0 && list.size() > 1) {
-                max = Math.max(max, list.get(1));
-            }
-            max = Math.max(max, line.length() - list.get(list.size() - 1));
+            //头部边界
+            max = Math.max(max, list.get(1));
+            //尾部边界
+            max = Math.max(max, line.length() - list.get(list.size() - 2) - 1);
 
             System.out.println(max);
         }
