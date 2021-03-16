@@ -1,4 +1,4 @@
-package top.bhappy.testing.huawei.second;
+package top.bhappy.testing.huawei.v2.jishi;
 
 import java.util.*;
 
@@ -9,7 +9,8 @@ import java.util.*;
  */
 
 // 86.96
-//todo fix
+// todo fix
+// fixed
 
 /**
  * 字符串 包含 数字、字母

@@ -1,4 +1,4 @@
-package top.bhappy.testing.huawei.fist;
+package top.bhappy.testing.huawei.v1.jishi;
 
 /**
  * @Author: liu lei

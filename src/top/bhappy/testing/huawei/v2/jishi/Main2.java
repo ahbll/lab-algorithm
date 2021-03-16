@@ -1,10 +1,10 @@
-package top.bhappy.testing.huawei.second;
+package top.bhappy.testing.huawei.v2.jishi;
 
 import java.util.*;
 
-//75
-//todo fix
-//fixed
+// 75
+// todo fix
+// fixed
 
 /**
  * 输入字符串，只包含大小写字母
