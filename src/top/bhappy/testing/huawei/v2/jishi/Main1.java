@@ -11,10 +11,10 @@ import java.util.*;
 /**
  * 输入：a:2,b:3,A:5@b:3,A:3  (全部字符@已用字符)
  * 输出：a:2,A:2   (剩余字符，按照原序输出，值为零的不输出)
- *
+ * <p>
  * case : 1  a:2,b:3,A:5@b:1,A:5   a:2,b:2
- *        2  a:2,b:3,A:5@b:3,A:3   a:2,A:2
- *        3  a:2@                  a:2
+ * 2  a:2,b:3,A:5@b:3,A:3   a:2,A:2
+ * 3  a:2@                  a:2
  */
 public class Main1 {
     public static void main(String[] args) {

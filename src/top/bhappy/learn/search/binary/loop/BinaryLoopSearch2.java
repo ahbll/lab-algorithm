@@ -26,7 +26,7 @@ public class BinaryLoopSearch2 {
         int mid;
         while (left <= right) {
             mid = left + ((right - left) >> 1);
-             if (arr[mid] >= num) {
+            if (arr[mid] >= num) {
                 right = mid - 1;
             } else {
                 left = mid + 1;
@@ -38,7 +38,6 @@ public class BinaryLoopSearch2 {
         }
         return -1;
     }
-
 
 
 }

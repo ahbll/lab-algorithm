@@ -1,4 +1,5 @@
 package top.bhappy.learn.graph.dijkstra.xiaohui;
+
 import java.util.LinkedList;
 
 /**
@@ -20,7 +21,7 @@ public class Graph {
     Graph(int size) {
         vertices = new Vertex[size];
         adj = new LinkedList[size];
-        for(int i = 0; i < adj.length; i ++) {
+        for (int i = 0; i < adj.length; i++) {
             adj[i] = new LinkedList<Edge>();
         }
     }

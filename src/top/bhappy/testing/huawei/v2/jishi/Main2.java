@@ -51,13 +51,14 @@ public class Main2 {
             }
             //倒序
             String[] array = sb.toString().split(";");
-            for (int i = array.length - 1; i >= 0; i --) {
+            for (int i = array.length - 1; i >= 0; i--) {
                 System.out.print(array[i]);
                 System.out.print(";");
             }
             System.out.println();
         }
     }
+
     private static void append(StringBuilder sb, char c, int count) {
         sb.append(c + "");
         sb.append(":");
@@ -90,7 +91,7 @@ public class Main2 {
         List<Character> result = new ArrayList<>();
         int index = 0;
         for (int i = 0; i < list.size(); i++) {
-            if (list.get(i) >= 'a' ) {
+            if (list.get(i) >= 'a') {
                 index = i;
                 break;
             }

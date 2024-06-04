@@ -8,7 +8,7 @@ package top.bhappy.learn.sort.select;
 public class SelectSort {
 
     public static void main(String[] args) {
-        int[] array = {9,8,6,7,1,2,4,5,0,3};
+        int[] array = {9, 8, 6, 7, 1, 2, 4, 5, 0, 3};
         sort(array);
         for (int i : array) {
             System.out.println(i);

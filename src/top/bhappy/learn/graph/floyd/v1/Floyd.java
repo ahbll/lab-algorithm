@@ -15,9 +15,9 @@ public class Floyd {
         //k---经由的顶点
         //i---起点
         //j---终点
-        for (int k = 0; k < matrix.length; k ++) {
-            for (int i = 0; i < matrix.length; i ++) {
-                for (int j = 0; j < matrix.length; j ++) {
+        for (int k = 0; k < matrix.length; k++) {
+            for (int i = 0; i < matrix.length; i++) {
+                for (int j = 0; j < matrix.length; j++) {
                     if (matrix[i][k] == INF || matrix[k][j] == INF) {
                         continue;
                     }
@@ -28,8 +28,8 @@ public class Floyd {
     }
 
     public static void print(int[][] matrix) {
-        for (int i = 0; i < matrix.length; i ++) {
-            for (int j = 0; j < matrix.length; j ++) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
                 System.out.printf("%3d ", matrix[i][j]);
             }
             System.out.println("");

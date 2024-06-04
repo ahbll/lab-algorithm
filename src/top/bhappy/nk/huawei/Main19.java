@@ -17,7 +17,7 @@ public class Main19 {
         while (sc.hasNext()) {
             Map<String, Integer[]> map = new HashMap<>();
             int count = Integer.parseInt(sc.nextLine());
-            for (int i = 0; i < count; i ++) {
+            for (int i = 0; i < count; i++) {
                 String s = sc.nextLine();
                 if (map.get(s) == null) {
                     Integer[] array = new Integer[2];
@@ -44,7 +44,7 @@ public class Main19 {
             for (Map.Entry<Integer, String> entry : treeMap.entrySet()) {
                 if (num >= size - 8) {
                     System.out.println(entry.getValue());
-                    num ++;
+                    num++;
                 }
             }
         }

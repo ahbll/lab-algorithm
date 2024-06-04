@@ -82,7 +82,7 @@ public class BinarySearchTree {
                 } else {
                     p = p.right;
                 }
-            } else if (p.data > data){
+            } else if (p.data > data) {
                 if (p.left == null) {
                     p.left = new Node(data);
                     return;
@@ -116,7 +116,7 @@ public class BinarySearchTree {
                         pp.right = p.right;
                     }
                     return;
-                //右子树为空，左子树不为空
+                    //右子树为空，左子树不为空
                 } else if (p.right == null && p.left != null) {
                     if (pp.left == p) {
                         pp.left = p.left;
@@ -124,16 +124,16 @@ public class BinarySearchTree {
                         pp.right = p.left;
                     }
                     return;
-                //左子树为空，右子树为空
-                } else if (p.left == null && p.right == null){
+                    //左子树为空，右子树为空
+                } else if (p.left == null && p.right == null) {
                     if (pp.left == p) {
                         pp.left = null;
                     } else {
                         pp.right = null;
                     }
                     return;
-                // 左子树不为空，右子树不为空
-                // todo 有bug！！！！！！！！！！！！！！！！！
+                    // 左子树不为空，右子树不为空
+                    // todo 有bug！！！！！！！！！！！！！！！！！
                 } else {
                     // 寻找右子树最小值
                     Node minP = p.right;
@@ -166,7 +166,7 @@ public class BinarySearchTree {
 
     // 中序遍历
     public void printMid() {
-       printMid(tree);
+        printMid(tree);
         System.out.println();
     }
 
@@ -187,9 +187,6 @@ public class BinarySearchTree {
 
         return null;
     }
-
-
-
 
 
 }

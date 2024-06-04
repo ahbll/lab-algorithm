@@ -12,7 +12,7 @@ public class DiGui {
      * 10名工人 ：w = 10
      * 金矿价值 ： g = [400, 500, 200, 300, 350]
      * 用工人数 ： p = [5, 5, 3, 4, 3]
-     * */
+     */
     public static void main(String[] args) {
         int w = 10;
         //金矿价值

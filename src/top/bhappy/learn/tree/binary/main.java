@@ -19,7 +19,7 @@ public class main {
         rootNode.right = node2;
         Node node4 = new Node(4);
         node1.right = node4;
-        Node node5= new Node(5);
+        Node node5 = new Node(5);
         node2.left = node5;
         depth_ergodic(rootNode);
         System.out.println("-------------");

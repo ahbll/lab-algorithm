@@ -10,17 +10,18 @@ import java.util.*;
 public class Test1 {
 
     /**
-     *  pid     1 3 10 5
-     *  ppid    3 0 5  3
-     *  kill    5
-     *  return  5 10
+     * pid     1 3 10 5
+     * ppid    3 0 5  3
+     * kill    5
+     * return  5 10
+     *
      * @param args
      */
     public static void main(String[] args) {
         int[] pidArr = {1, 3, 10, 5};
         int[] ppidArr = {3, 0, 5, 3};
         int[] kill = kill(pidArr, ppidArr, 5);
-        for (int i = 0; i < kill.length; i ++) {
+        for (int i = 0; i < kill.length; i++) {
             System.out.print(kill[i] + " ");
         }
     }
@@ -44,7 +45,7 @@ public class Test1 {
         int i = 0;
         for (String s : pids) {
             result[i] = Integer.parseInt(s);
-            i ++;
+            i++;
         }
         return result;
     }

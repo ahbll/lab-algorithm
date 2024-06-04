@@ -37,32 +37,32 @@ public class MergeSort {
         while (s1 <= mid && s2 <= right) {
             if (arr[s1] <= arr[s2]) {
                 tempArr[i] = arr[s1];
-                s1 ++;
+                s1++;
             } else {
                 tempArr[i] = arr[s2];
-                s2 ++;
+                s2++;
             }
-            i ++;
+            i++;
         }
         // 将剩余数据拷贝过来
         if (s1 > mid) {
             while (s2 <= right) {
                 tempArr[i] = arr[s2];
-                s2 ++;
-                i ++;
+                s2++;
+                i++;
             }
         }
         if (s2 > right) {
             while (s1 <= mid) {
                 tempArr[i] = arr[s1];
-                s1 ++;
-                i ++;
+                s1++;
+                i++;
             }
         }
         int k = left;
-        for (int j = 0; j < tempArr.length; j ++) {
+        for (int j = 0; j < tempArr.length; j++) {
             arr[k] = tempArr[j];
-            k ++;
+            k++;
         }
     }
 

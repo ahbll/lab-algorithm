@@ -33,7 +33,7 @@ class Test {
         arr[8] = new String[]{"t", "u", "v"};
         arr[9] = new String[]{"w", "x", "y", "z"};
         int[] numArr = new int[digits.length()];
-        for (int i = 0; i < digits.length(); i ++) {
+        for (int i = 0; i < digits.length(); i++) {
             int num = Integer.parseInt(digits.charAt(i) + "");
             numArr[i] = num;
         }

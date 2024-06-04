@@ -3,7 +3,7 @@ package top.bhappy.nk.huawei;
 /**
  * @Author: liu lei
  * @Date: 2020/4/6 22:18
- * @Description:
+ * @Description: 有问题
  */
 
 /**
@@ -24,7 +24,7 @@ public class Main16 {
             int[] prices = new int[num + 1];
             int[] weights = new int[num + 1];
             int[] refers = new int[num + 1];
-            for (int i = 1; i < num + 1; i ++) {
+            for (int i = 1; i < num + 1; i++) {
                 String item = sc.nextLine();
                 String[] arr = item.split("\\s+");
                 //价格
@@ -47,8 +47,8 @@ public class Main16 {
             //辗转计算currenWeight
             //假设物品清单按照 主件1， 主件1@附件1， 主件1@附件2，主件2， 主件2@附件1 的顺序输入
             //如果非按照上述顺序，则需排序
-            for (int i = 2; i < num + 1; i ++) {
-                for (int j = 0; j < len; j ++) {
+            for (int i = 2; i < num + 1; i++) {
+                for (int j = 0; j < len; j++) {
                     //主件
                     if (refers[i] == 0) {
                         if (10 * len < prices[i]) {
@@ -70,7 +70,7 @@ public class Main16 {
                             } else {
                                 if (prices[i] + prices[i - 1] + prices[i - 2] < j) {
                                     //主件 + 第二件附件
-                                    int w = weights[i] + weights[i - 2] + res[i - 3][len - prices[i] / 10 - prices[ i - 2] / 10];
+                                    int w = weights[i] + weights[i - 2] + res[i - 3][len - prices[i] / 10 - prices[i - 2] / 10];
                                     //最大值
                                     res[i][j] = Math.max(w, res[i - 1][j]);
                                 } else {
@@ -78,7 +78,7 @@ public class Main16 {
                                     int w1 = weights[i] + weights[i - 1] + weights[i - 2] +
                                             res[i - 3][len - prices[i] / 10 - prices[i - 2] / 10 - prices[i - 3] / 10];
                                     //主件+附件2
-                                    int w2 = weights[i] + weights[i - 2] + res[i - 3][len - prices[i] / 10 - prices[i-2] / 10];
+                                    int w2 = weights[i] + weights[i - 2] + res[i - 3][len - prices[i] / 10 - prices[i - 2] / 10];
                                     //最大值
                                     res[i][j] = Math.max(Math.max(w1, w2), res[i - 1][j]);
                                 }

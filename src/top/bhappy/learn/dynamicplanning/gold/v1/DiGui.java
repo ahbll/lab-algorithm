@@ -13,7 +13,7 @@ package top.bhappy.learn.dynamicplanning.gold.v1;
  * 金矿价值 ： g = [400, 500, 200, 300, 350]
  * 用工人数 ： p = [5, 5, 3, 4, 3]
  * 求最多能获得多少黄金
- * */
+ */
 
 public class DiGui {
     static int n;

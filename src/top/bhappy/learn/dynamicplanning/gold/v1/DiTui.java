@@ -9,8 +9,6 @@ import java.util.Arrays;
  */
 
 
-
-
 public class DiTui {
 
     public static int max(int n, int w, int[] g, int[] p) {

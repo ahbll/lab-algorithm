@@ -27,7 +27,7 @@ public class Graph {
         adj1 = new List[size];
         adj2 = new List[size];
 
-        for (int i = 0; i < size; i ++) {
+        for (int i = 0; i < size; i++) {
             vertices[i] = new Vertex(i);
             adj1[i] = new ArrayList<>();
             adj2[i] = new ArrayList<>();

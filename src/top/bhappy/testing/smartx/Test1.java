@@ -37,7 +37,7 @@ public class Test1 {
         int start = 0;
         int end = 0;
         boolean b = false;
-        for (int i = 0; i < text.length(); i ++) {
+        for (int i = 0; i < text.length(); i++) {
             char c = text.charAt(i);
             if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
                 if (!b) {
@@ -51,7 +51,7 @@ public class Test1 {
                     String word = text.substring(start, end);
                     Integer count = map.get(word);
                     if (count != null) {
-                        count ++;
+                        count++;
                     } else {
                         count = 1;
                     }

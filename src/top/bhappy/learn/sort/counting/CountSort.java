@@ -53,7 +53,7 @@ public class CountSort {
         int bucketCount = max + 1;
         int[] buckets = new int[bucketCount];
         for (int i : arr) {
-            buckets[i] ++;
+            buckets[i]++;
         }
         for (int i = 0; i < bucketCount - 1; i++) {
             buckets[i + 1] = buckets[i] + buckets[i + 1];
@@ -63,7 +63,7 @@ public class CountSort {
             if (i < buckets[j]) {
                 arr[i] = j;
             } else {
-                j ++;
+                j++;
             }
         }
 

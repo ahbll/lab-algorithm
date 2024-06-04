@@ -17,7 +17,7 @@ public class Main5 {
                 num = num / i;
                 sb.append(i + " ");
             } else {
-                i ++;
+                i++;
             }
         }
         return sb.toString();

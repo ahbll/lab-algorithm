@@ -21,7 +21,7 @@ public class LinkedList {
             tail.next = node;
         }
         tail = node;
-        size ++;
+        size++;
     }
 
     public int getSize() {
@@ -118,8 +118,8 @@ public class LinkedList {
         Node p2 = head;
         while (n > 0) {
             if (p1 != null) {
-               p1 = p1.next;
-               n --;
+                p1 = p1.next;
+                n--;
             } else {
                 return false;
             }

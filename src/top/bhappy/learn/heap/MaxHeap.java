@@ -9,14 +9,14 @@ package top.bhappy.learn.heap;
 import java.util.Arrays;
 
 /**
- *           9
- *       7       6
- *     5   4   3   1
- *   0
- *
- *           0
- *       1        2
- *     3   4    5   6
+ * 9
+ * 7       6
+ * 5   4   3   1
+ * 0
+ * <p>
+ * 0
+ * 1        2
+ * 3   4    5   6
  */
 public class MaxHeap {
 
@@ -59,7 +59,6 @@ public class MaxHeap {
     }
 
     /**
-     *
      * @param arr    堆数组
      * @param length 堆大小
      */
@@ -78,16 +77,15 @@ public class MaxHeap {
     }
 
     /**
-     *
-     * @param arr      堆数组
-     * @param pIndex   向下调整的下标
-     * @param length   堆大小
+     * @param arr    堆数组
+     * @param pIndex 向下调整的下标
+     * @param length 堆大小
      */
     private static void downAdjust(int[] arr, int pIndex, int length) {
         int cIndex = pIndex * 2 + 1;
         while (cIndex < length) {
             if (cIndex + 1 < length && arr[cIndex + 1] > arr[cIndex]) {
-                cIndex ++;
+                cIndex++;
             }
             if (arr[pIndex] < arr[cIndex]) {
                 swap(arr, pIndex, cIndex);
@@ -100,12 +98,11 @@ public class MaxHeap {
     }
 
     /**
-     *
-     * @param arr     堆数组
-     * @param length  堆大小
+     * @param arr    堆数组
+     * @param length 堆大小
      */
     public static void buildHeap(int[] arr, int length) {
-        for (int i = (length - 2) / 2; i >= 0; i --) {
+        for (int i = (length - 2) / 2; i >= 0; i--) {
             downAdjust(arr, i, length);
         }
     }
@@ -116,14 +113,14 @@ public class MaxHeap {
         }
         int result = arr[0];
         arr[0] = arr[count - 1];
-        downAdjust(arr, 0, -- count);
+        downAdjust(arr, 0, --count);
         return result;
     }
 
     public boolean push(int i) {
         if (count < arr.length) {
             arr[count] = i;
-            upAdjust(arr, ++ count);
+            upAdjust(arr, ++count);
             return true;
         }
         return false;

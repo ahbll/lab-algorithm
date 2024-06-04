@@ -51,7 +51,7 @@ public class Queue8 {
     //index -- 行
     public static boolean judge(int index) {
         count++;
-        for (int i = 0; i < index; i ++) {
+        for (int i = 0; i < index; i++) {
             if (array[i] == array[index] || Math.abs(index - i) == Math.abs(array[index] - array[i])) {
                 return false;
             }

@@ -11,6 +11,7 @@ public class Graphs {
 
     /**
      * 广度优先遍历
+     *
      * @param graph
      * @param start
      */
@@ -37,6 +38,7 @@ public class Graphs {
 
     /**
      * 深度优先遍历
+     *
      * @param graph
      * @param start
      */
@@ -44,6 +46,7 @@ public class Graphs {
         boolean[] accesses = new boolean[graph.size];
         search(graph, start, accesses);
     }
+
     private static void search(Graph graph, int index, boolean[] accesses) {
         if (!accesses[index]) {
             accesses[index] = true;
@@ -57,6 +60,7 @@ public class Graphs {
 
     /**
      * 最短路径
+     *
      * @param graph
      * @param start
      * @param end
@@ -104,7 +108,6 @@ public class Graphs {
         System.out.println("paths: " + Arrays.toString(paths.toArray()));
 
     }
-
 
 
 }

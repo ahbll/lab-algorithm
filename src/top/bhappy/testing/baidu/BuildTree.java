@@ -8,14 +8,14 @@ package top.bhappy.testing.baidu;
 
 import java.util.Arrays;
 
-/**给出一棵二叉树的先序和中序数组，通过这两个数组直接生成正确的后序数组。
- *              a
-*            b      c
- *         d   e   f  g
- *
+/**
+ * 给出一棵二叉树的先序和中序数组，通过这两个数组直接生成正确的后序数组。
+ * a
+ * b      c
+ * d   e   f  g
+ * <p>
  * 前序：a b d e c f g
  * 中序：d b e a f c g
- *
  */
 public class BuildTree {
 
@@ -49,7 +49,6 @@ public class BuildTree {
         subForEach(node.right);
         System.out.println(node.value);
     }
-
 
 
     public static class Node {

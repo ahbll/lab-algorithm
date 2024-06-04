@@ -30,7 +30,7 @@ public class Plain {
                     break;
                 }
             }
-            if (j < patternLen -1) {
+            if (j < patternLen - 1) {
                 k++;
                 i = k;
                 j = 0;

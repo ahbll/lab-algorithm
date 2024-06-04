@@ -3,7 +3,7 @@ package top.bhappy.testing.toutiao;
 /**
  * @Author: liu lei
  * @Date: 2020/4/8 17:42
- * @Description:
+ * @Description: [(' A ', ' B '), ('A', 'C'), ('B', 'D'), ('D', 'A')] 是否有循环依赖
  */
 
 /**
@@ -11,7 +11,6 @@ package top.bhappy.testing.toutiao;
  * [('A', 'B'), ('A', 'C'), ('B', 'D'), ('D', 'A')] 是否有循环依赖
  *
  */
-
 
 
 import java.util.*;

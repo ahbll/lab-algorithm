@@ -33,11 +33,11 @@ public class QuickSort {
         int pivotKey = array[left];
         while (left < right) {
             while (pivotKey <= array[right] && left < right) {
-                right --;
+                right--;
             }
             swap(array, left, right);
             while (pivotKey >= array[left] && left < right) {
-                left ++;
+                left++;
             }
             swap(array, left, right);
         }

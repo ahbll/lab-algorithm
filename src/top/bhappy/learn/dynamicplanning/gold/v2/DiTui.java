@@ -15,7 +15,7 @@ import java.util.Arrays;
  * 金矿价值 ： g = [400, 500, 200, 300, 350]
  * 用工人数 ： p = [5, 5, 3, 4, 3]
  * 求最多能获得多少黄金
- * */
+ */
 
 public class DiTui {
 
@@ -56,7 +56,7 @@ public class DiTui {
             for (int j = 0; j < worker + 1; j++) {
                 if (j < workers[i]) {
                     cur[j] = pre[j];
-                } else  {
+                } else {
                     cur[j] = Math.max(pre[j], golds[i] + pre[j - workers[i]]);
                 }
             }

@@ -58,7 +58,7 @@ public class BucketSort {
         // 创建桶
         int bucketCount = (max - min) / 100 + 1;
         List<Integer>[] buckets = new List[bucketCount];
-        for (int i = 0; i < bucketCount; i ++) {
+        for (int i = 0; i < bucketCount; i++) {
             buckets[i] = new ArrayList<>();
         }
         for (int i : arr) {
@@ -70,13 +70,13 @@ public class BucketSort {
         for (List<Integer> list : buckets) {
             if (!list.isEmpty()) {
                 int[] array = new int[list.size()];
-                for (int i = 0; i < array.length; i ++) {
+                for (int i = 0; i < array.length; i++) {
                     array[i] = list.get(i);
                 }
                 QuickSort.sort(array);
                 for (int i = 0; i < array.length; i++) {
                     arr[index] = array[i];
-                    index ++;
+                    index++;
                 }
             }
         }

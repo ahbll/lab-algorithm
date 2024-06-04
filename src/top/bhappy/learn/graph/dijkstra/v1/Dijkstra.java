@@ -59,7 +59,7 @@ public class Dijkstra {
             //开始遍历minIndex
             accessSet.add(minIndex);
             LinkedList<Edge> edges = graph.adj[minIndex];
-            for(Edge edge : edges) {
+            for (Edge edge : edges) {
                 if (distanceMap.get(edge.index) > minDistance + edge.weight) {
                     distanceMap.put(edge.index, minDistance + edge.weight);
                     preVertex[edge.index] = minIndex;
@@ -70,7 +70,6 @@ public class Dijkstra {
         System.out.println(Arrays.toString(preVertex));
         return distanceMap;
     }
-
 
 
 }

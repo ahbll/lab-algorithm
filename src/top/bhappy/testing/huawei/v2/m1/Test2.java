@@ -16,6 +16,7 @@ public class Test2 {
         String s = "({[]})";
         System.out.println(check(s));
     }
+
     private static boolean check(String s) {
         if (s.length() % 2 == 1) {
             return false;

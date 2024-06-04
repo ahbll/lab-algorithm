@@ -11,7 +11,7 @@ import java.util.Random;
 public class ShellSort {
 
     public static void main(String[] args) {
-        int[] array = {5,8,6,3,9,2,1,7};
+        int[] array = {5, 8, 6, 3, 9, 2, 1, 7};
 
         sort(array);
 
@@ -32,10 +32,10 @@ public class ShellSort {
                 //插入排序
                 //在大多数元素已经有序的情况下，插入排序的工作量较小
                 //在元素数量较少的情况下，插入排序的工作量较小
-                for(int j = i + step; j < arr.length; j += step) {
+                for (int j = i + step; j < arr.length; j += step) {
                     int temp = arr[j];
                     for (int k = j - step; k >= i; k -= step) {
-                        count ++;
+                        count++;
                         if (arr[k] > temp) {
                             arr[k + step] = arr[k];
                         } else {

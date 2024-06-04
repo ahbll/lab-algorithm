@@ -1,24 +1,23 @@
-package top.bhappy.test;
+package top.bhappy.nk.nc;
 
 
 /**
  * @Author: liu lei
- * @Date: 2021/3/29 09:24
+ * @Date: 2021/4/29 09:24
  * @Description: nk nc2 重排链表
- *               https://www.nowcoder.com/practice/3d281dc0b3704347846a110bf561ef6b?tpId=188&tags=&title=&diffculty=0&judgeStatus=0&rp=1&tab=answerKey
- *               将给定单链表L：L0->L1->L2->...Ln-1->Ln
- *               重排序为：L0->Ln->L1->Ln-1....
- *               要求原地排序，不改变节点内部的指
- *               例如：对于给定的单链表{10,20,30,40}，将其重新排序为{10,40,20,30}.
- *
- *
+ * https://www.nowcoder.com/practice/3d281dc0b3704347846a110bf561ef6b?tpId=188&tags=&title=&diffculty=0&judgeStatus=0&rp=1&tab=answerKey
+ * 将给定单链表L：L0->L1->L2->...Ln-1->Ln
+ * 重排序为：L0->Ln->L1->Ln-1....
+ * 要求原地排序，不改变节点内部的指
+ * 例如：对于给定的单链表{10,20,30,40}，将其重新排序为{10,40,20,30}.
  */
-public class Test {
+public class NC2 {
 
     public static class ListNode {
         int val;
         ListNode next;
-        ListNode (int val) {
+
+        ListNode(int val) {
             this.val = val;
         }
     }
@@ -55,12 +54,12 @@ public class Test {
         int len = 0;
         while (curr != null) {
             curr = curr.next;
-            len ++;
+            len++;
         }
         //链表中点坐标
         int mid = len / 2 - 1;
         curr = head;
-        for (int i = 0; i < mid; i ++) {
+        for (int i = 0; i < mid; i++) {
             curr = curr.next;
         }
         //链表中点

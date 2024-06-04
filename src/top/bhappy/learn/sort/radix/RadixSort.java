@@ -29,13 +29,15 @@ public class RadixSort {
         long t1 = new Date().getTime();
         sort(arr, 11);
         long t2 = new Date().getTime();
-        System.out.println(t2 - t1);;
+        System.out.println(t2 - t1);
+        ;
         //print(arr);
 
         long t3 = new Date().getTime();
         //QuickSort3.sort(arr);
         long t4 = new Date().getTime();
-        System.out.println(t4 - t3);;
+        System.out.println(t4 - t3);
+        ;
     }
 
     public static void sort(long[] arr, int bound) {
@@ -55,7 +57,7 @@ public class RadixSort {
             while (i > 0) {
                 remain = (int) (result % 10);
                 result = result / 10;
-                i --;
+                i--;
             }
             if (buckets[remain] == null) {
                 buckets[remain] = new ArrayList<>();
@@ -67,7 +69,7 @@ public class RadixSort {
             if (list != null) {
                 for (Long l : list) {
                     arr[i] = l;
-                    i ++;
+                    i++;
                 }
             }
         }

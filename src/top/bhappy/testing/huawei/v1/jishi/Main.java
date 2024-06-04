@@ -3,14 +3,14 @@ package top.bhappy.testing.huawei.v1.jishi;
 /**
  * @Author: liu lei
  * @Date: 2020/4/7 22:04
- * @Description:
- * 输入一个句子
+ * @Description: 输入一个句子
  * 句子由单词、空格、数字、标点组成
  * 将单词重组，要求
  * 每个单词首字母大写
  * 单词间用一个空格隔开
  * 句子末尾加。
  */
+
 import java.util.*;
 
 public class Main {
@@ -25,13 +25,13 @@ public class Main {
     }
 
     //遍历的方式
-    public static String traversal (String line) {
+    public static String traversal(String line) {
         line = line + "?";
         int start = 0;
         int end = 0;
         boolean b = false;
         List<String> list = new ArrayList<>();
-        for (int i = 0; i < line.length(); i ++) {
+        for (int i = 0; i < line.length(); i++) {
             char c = line.charAt(i);
             if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
                 if (!b) {
@@ -54,6 +54,7 @@ public class Main {
         res = res.substring(0, res.length() - 1) + ".";
         return res;
     }
+
     //正则方式
     public static String regex(String line) {
         String regex = "[^a-zA-Z]+";
@@ -65,8 +66,6 @@ public class Main {
         }
         return res.substring(0, res.length() - 1) + ".";
     }
-
-
 
 
 }

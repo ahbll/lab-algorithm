@@ -8,7 +8,7 @@ package top.bhappy.learn.sort.insert;
 public class InsertSort {
 
     public static void main(String[] args) {
-        int[] array = {9,8,6,7,1,2,4,5,0,3};
+        int[] array = {9, 8, 6, 7, 1, 2, 4, 5, 0, 3};
         //i = 4
         //value = 1
         //{0,5,6,7,1,2}
@@ -36,6 +36,19 @@ public class InsertSort {
                 }
             }
             nums[index] = value;
+        }
+    }
+
+    public static void sort2(int[] arr) {
+        int temp;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i; j > 0; j--) {
+                if (arr[j] < arr[j - 1]) {
+                    temp = arr[j];
+                    arr[j] = arr[j - 1];
+                    arr[j - 1] = temp;
+                }
+            }
         }
     }
 }

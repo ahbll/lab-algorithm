@@ -22,7 +22,7 @@ public class Test1 {
 
     private static int getMax(int[] arr, int index) {
         if (index == 0) {
-            return arr[0] ;
+            return arr[0];
         } else if (index == 1) {
             return Math.max(arr[0], arr[1]);
         } else {

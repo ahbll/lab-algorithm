@@ -37,11 +37,11 @@ public class D_C {
         int pivotKey = array[left];
         while (left < right) {
             while (left < right && pivotKey >= array[right]) {
-                right --;
+                right--;
             }
             swap(array, left, right);
             while (left < right && pivotKey <= array[left]) {
-                left ++;
+                left++;
             }
             swap(array, left, right);
         }

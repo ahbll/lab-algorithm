@@ -32,7 +32,7 @@ public class QuickSort {
     private static int partition(long[] array, int left, int right) {
         while (left < right) {
             while (array[left] <= array[right] && left < right) {
-                right --;
+                right--;
             }
             swap(array, left, right);
             while (array[left] <= array[right] && left < right) {

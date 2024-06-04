@@ -34,14 +34,14 @@ public class Main {
 
     public static void solve(int n, int k, int m) {
         Queue<Integer> queue = new LinkedList<>();
-        for(int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) {
             queue.offer(i + 1);
         }
-        for(int i = 0; i < k - 1; i++) {
+        for (int i = 0; i < k - 1; i++) {
             queue.offer(queue.poll());
         }
-        while(!queue.isEmpty()) {
-            for(int i = 0; i < m - 1; i++) {
+        while (!queue.isEmpty()) {
+            for (int i = 0; i < m - 1; i++) {
                 queue.offer(queue.poll());
             }
             int a = queue.poll();
@@ -68,7 +68,7 @@ public class Main {
         while (current.next != current) {
             //找到报数为m-1的人
             for (int i = 2; i < m; i++) {
-               current = current.next;
+                current = current.next;
             }
             //输出报数为m的人的编号
             System.out.print(current.next.value + " ");
@@ -84,7 +84,8 @@ public class Main {
     public static class Node {
         int value;
         Node next;
-        public Node (int value) {
+
+        public Node(int value) {
             this.value = value;
         }
     }

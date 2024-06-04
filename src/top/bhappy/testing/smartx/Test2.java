@@ -21,14 +21,14 @@ public class Test2 {
 
     public static int getMaxCount(int n, int x) {
         StringBuilder s = new StringBuilder();
-        for (int i = 0; i < n; i ++) {
+        for (int i = 0; i < n; i++) {
             s = s.append(i);
         }
         int count = 0;
         char c = (x + "").charAt(0);
-        for (int i = 0; i < s.length(); i ++) {
+        for (int i = 0; i < s.length(); i++) {
             if (c == s.charAt(i)) {
-                count ++;
+                count++;
             }
         }
         return count;
@@ -40,12 +40,12 @@ public class Test2 {
             return 0;
         }
 
-        for (int i = 0; i < n; i ++) {
+        for (int i = 0; i < n; i++) {
             int j = i;
             while (j > 0) {
                 int k = j % 10;
                 if (k == x) {
-                    count ++;
+                    count++;
                 }
                 j = j / 10;
             }

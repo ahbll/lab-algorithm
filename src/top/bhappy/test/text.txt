@@ -1,0 +1,9 @@
+ERROR 2024-05-22 09:59:16,171] c.x.v.c.b.u.ErrorHandlerUtil [resin-port-8080-4407] -1 /api/community/post/topic/ground/announces Request get unhandled error, perfName : Unhandled-error
+java.lang.NullPointerException: null
+	at com.xiaomi.vip.web.controllers.CommunityController.findGroundAnnouncesByTopic(CommunityController.java:856) ~[classes:?]
+	at sun.reflect.GeneratedMethodAccessor890.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at com.xiaomi.vip.web.controllers.UrlReplaceInterceptor.round(UrlReplaceInterceptor.java:28) ~[classes:?]
+	at com.xiaomi.vip.web.controllers.ClientJumpActionInterceptor.round(ClientJumpActionInterceptor.java:29) ~[classes:?]
+	at net.paoding.rose.web.portal.impl.WindowCancelableSupportInterceptor.round(WindowCancelableSupportInterceptor.java:39) ~[paoding-rose-portal-2.4.0-spring4.jar:1.0-20100817]
